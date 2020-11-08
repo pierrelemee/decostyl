@@ -61,14 +61,8 @@ table {
 
 /* Style */
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
 body {
     display: flex;
-    flex-direction: column;
     align-content: space-evenly;
     align-items: center;
     justify-content: center;
@@ -77,22 +71,40 @@ body {
 
 }
 
-h1 {
+@media screen and (max-width: 767px) {
+    html, body {
+        width: 480px;
+        height: 100%;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    header > ul {
+        margin-top: 40px;
+    }
+}
+
+header {
+    margin: 20px;
+}
+
+header > h1 {
     text-transform: uppercase;
     font: 3.5rem bold, "Good Times";
     letter-spacing: .1rem;
     color: #ee8016;
 }
 
-h3 {
+header > h3 {
     text-transform: lowercase;
     font: 2rem bold, "Digital medium";
     letter-spacing: .4rem;
     color: #ffffff;
 }
 
-ul {
-    margin: 40px 0 0 0;
+header > ul {
     width: 400px;
     display: inline-block;
     color: #ffffff;
@@ -100,4 +112,51 @@ ul {
     letter-spacing: .1rem;
     float: right;
     text-align: right;
+}
+
+#content {
+    color: #ffffff;
+    margin: 20px;
+}
+
+#content > h1,h2 {
+    text-transform: capitalize;
+    font: 1.5rem bold, "Digital medium";
+    letter-spacing: .2rem;
+    margin: .8rem 0;
+}
+
+#content > h3,h4,h5,h6 {
+    text-transform: capitalize;
+    font: 1.1rem bold, "Digital medium";
+    letter-spacing: .1rem;
+    margin: .5rem 0;
+}
+
+#content > p {
+    color: #aaa;
+    font-family: sans-serif;
+    margin: .5rem 0;
+}
+
+#content span.text-bold {
+    font-weight: bold;
+    color: #ddd;
+}
+
+#content span.text-italic {
+    font-style: italic;
+}
+
+#content a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+#content a:visited {
+    color: #57391d;
 }
